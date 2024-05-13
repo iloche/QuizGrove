@@ -36,16 +36,37 @@ main{
 }
 .wrapper{
     margin: 0 auto;
+    padding: 15px;
     width: 350px;
+}
+.tutoriel, .categories{
+    background: $darkerRosy;
+    padding: 0 20px 20px 20px;
+    border-radius: 10px;
 }
 .tuto-title{
     position: relative;
+    h2{
+        padding: 15px 0;
+    }
     .howMushy{
         width: 30%;
         position: absolute;
-        top: 25%;
-        right: 2%;
-        transform: translate(-50%, -50%);
+        top: 10%;
+        left: 75%;
+        transform: translate(-30%, -30%);
+    }
+}
+.tuto-box{
+    h2{
+        font-weight: lighter;
+        font-style: italic;
+        padding: 15px;
+        font-size: 18px;
+    }
+    .step{
+        background: $beigeFilter;
+        border-radius: 5px;
     }
 }
 .backTop{
@@ -58,8 +79,8 @@ main{
     right: 20px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: bisque;
-    color: #483C32;
+    background-color: tan;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;

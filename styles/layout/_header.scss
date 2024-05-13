@@ -52,7 +52,7 @@ header{
             position: absolute;
             width: 100vw;
             height: 100vh;
-            top: 357%; 
+            top: 320%; 
             left: 50%;
             transform: translate(-50%, -50%);
             @include transition;
@@ -60,7 +60,7 @@ header{
                 translate: 0;
                 padding-top: 50%;
             }
-            .tags, .account, .login{
+            .account, .login, .home, .help{
                 cursor: pointer;
                 font-weight: bold;
                 margin: 10px;

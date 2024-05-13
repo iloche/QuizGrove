@@ -77,9 +77,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (consent === 'true'|| consent === 'false') {
         cookie.style.display = 'none';
     }
-  });
 
-  document.addEventListener('DOMContentLoaded', function() {
+    //Bouton Back to Top
     const backToTopButton = document.getElementById('backToTopBtn');
   
     window.addEventListener('scroll', function() {
