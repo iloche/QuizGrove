@@ -1,0 +1,113 @@
+header{
+    background: url(https://i.pinimg.com/originals/52/a2/cc/52a2cca14d2b8e510876507aaa0c5b13.jpg) top / cover;
+    // width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    h1{
+        cursor: pointer;
+        font-size: 40px;
+        margin: 5px;
+    }
+    small{
+        font-style: italic;
+        font-size: 14px;
+    }
+    .topBar{
+        margin: 15px auto;
+        width: 80%;
+        text-align: center;
+        border: 3mm ridge rosybrown;
+        border-radius: 15px;
+        background-color: tan;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 5%;
+        left: 15%;
+        transform: translate(-5%, -15%);
+        z-index: 111111;
+        .logo{
+            margin: 15px 100px;
+            position: relative;
+            .mushy{
+                width: 40%;
+                position: absolute;
+                top: 5%;
+                left: -40%;
+                transform: translate(-5%, -10%);
+            }
+            .title{
+                margin: 0;
+            }
+        }
+        .right-topBar{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: $beigeFilter;
+            padding: 5px;
+            translate: 0 -300%;
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            top: 200%; 
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include transition;
+            &.active{
+                translate: 0;
+            }
+            .tags, .account, .login{
+                cursor: pointer;
+                font-weight: bold;
+                margin: 10px;
+                &:hover{
+                    color: wheat;
+                }
+            }
+        }
+        .burger{
+            position: absolute;
+            right: 5px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            @include transition;
+            div{
+                background-color: black;
+                border-radius: 5px;
+                height: 3px;
+                margin: 5px;
+            } 
+            &:hover{
+            transform: rotate(90deg) scale(0.7);
+            }
+            &.active{
+                rotate: 90deg;
+            }
+        }
+        @media screen and (min-width:1024px) {
+            .right-topBar{
+                flex-direction: row;
+                right:10px;
+                z-index:1;
+                padding: 15px 0;
+                height: auto;
+                width: auto;
+                background: none;
+                .tags, .account, .login{
+                    margin: 30px;
+                    cursor: pointer;
+                    &:hover{
+                        color: wheat;
+                    }
+                }
+            }
+            .burger{
+                display: none;
+            }
+        }
+    }
+}
