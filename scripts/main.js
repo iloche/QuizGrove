@@ -4,10 +4,17 @@
 
 // 🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐
 
+// function display(){
+//     fetch(`https://api.openquizzdb.org/?key=CMZ7U55A9Q&choice=4&anec=1&wiki=1`)
+//     .then(response => response.json())
+//     .then(data => {
+//       console.log(data);
+//     })
+//     .catch(error => {console.log("Erreur lors de la récup des données :", error);
+//   })
+// }
 
-
-
-
+// display()
 
 
 
@@ -70,4 +77,23 @@ document.addEventListener('DOMContentLoaded', function() {
     if (consent === 'true'|| consent === 'false') {
         cookie.style.display = 'none';
     }
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const backToTopButton = document.getElementById('backToTopBtn');
+  
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) { // Affichez le bouton une fois que l'utilisateur a fait défiler vers le bas de 300 pixels
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+  
+    backToTopButton.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
   });

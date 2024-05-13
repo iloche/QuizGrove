@@ -3,24 +3,66 @@
     font-weight: 300;
     font-style: normal;
 }
-.wrapper{
+main{
+    background-color: $background;
+}
+.top-content{
     width: 100%;
     margin: 0 auto;
     h1{
         font-weight: lighter;
     }
-}
-.box{
-    @include absmiddle;
-    width: 50%;
-    text-align: center;
-    border: 1px solid rosybrown;
-    border-radius: 15px;
-    background-color: tan;
-    .start{
-        background-color: rosybrown;
-        width: 20%;
+    .box{
+        @include absmiddle;
+        width: 50%;
+        text-align: center;
+        border: 2px solid rosybrown;
+        border-radius: 15px;
+        background-color: tan;
+        .start{
+            background-color: rosybrown;
+            width: 50%;
+            margin: 10px auto;
+            border-radius: 5px;
+            border: 2px solid $darkerRosy;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 10px;
+            &:hover{
+                background-color: $darkerRosy;
+            }
+        }
     }
+}
+.wrapper{
+    margin: 0 auto;
+    width: 350px;
+}
+.tuto-title{
+    position: relative;
+    .howMushy{
+        width: 30%;
+        position: absolute;
+        top: 25%;
+        right: 2%;
+        transform: translate(-50%, -50%);
+    }
+}
+.backTop{
+    position: relative;
+}
+#backToTopBtn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: bisque;
+    color: #483C32;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 .cookie{
     background-color: $beigeFilter;
@@ -28,12 +70,11 @@
     border-radius: 15px;
     display: none;
     position: fixed;
-    bottom: 5%;
+    bottom: 1%;
     left: 10%;
     transform: translate(-5%, -10%);
-    padding: 15px;
+    padding: 10px;
     border: 1px solid rosybrown;
-    // z-index: 10;
     text-align: center;
     .policy{
         width: 55%;
