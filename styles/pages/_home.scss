@@ -123,6 +123,7 @@ main{
     padding: 10px;
     border: 1px solid rosybrown;
     text-align: center;
+    z-index: 12;
     .policy{
         width: 55%;
         margin: 5px auto;
@@ -147,9 +148,9 @@ main{
 }
 
 .newsletter{
-    background: url(Gnome_forest_2.png) center / cover;
+    background: url(https://w.wallhaven.cc/full/72/wallhaven-72yrwy.jpg) top / cover;
     width: 100vw;
     height: 100vh;
-    // background-repeat: no-repeat;
+    background-repeat: no-repeat;
     overflow: hidden;
 }

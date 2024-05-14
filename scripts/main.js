@@ -55,12 +55,6 @@ function displayCategories() {
 // Appelez la fonction pour afficher les catégories
 displayCategories();
 
-
-
-
-
-
-
 // 🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️  
 
 // ⭐ // // // // // // // Évenements // // // // // // // // // // // //⭐
