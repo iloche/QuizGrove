@@ -29,6 +29,9 @@ main{
             cursor: pointer;
             font-weight: bold;
             padding: 10px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+            transition: box-shadow 0.3s ease;
+            @include transition;
             &:hover{
                 background-color: $darkerRosy;
             }
@@ -40,7 +43,7 @@ main{
     padding: 15px;
     max-width: 80%;
 }
-.tutoriel, .swiper, .difficulty{
+.tutoriel, .swiper, .difficulty, .anecdote{
     margin: 50px 0;
     background: $darkerRosy;
     padding: 0 20px 20px 20px;
@@ -51,7 +54,6 @@ main{
 }
 .categoriesBox{
     .categoriesName{
-        cursor: pointer;
         font-size: 18px;
         font-weight: lighter;
     }  
@@ -63,10 +65,25 @@ main{
         margin: 5px;
         width: 100%;
         text-align: center;
-        cursor: pointer;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        transition: box-shadow 0.3s ease;
         &:hover{
             color: wheat;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
         }
+    }
+}
+.difficulty-title{
+    position: relative;
+    h2{
+        width: 80%;
+    }
+    .warriorMushy{
+        width: 130px;
+        position: absolute;
+        top: 20px;
+        right: -40px;
+        transform: translate(-10%, -50%);
     }
 }
 .tuto-title{
@@ -80,7 +97,7 @@ main{
     }
 }
 .step, .level{
-    background: $beigeFilter;
+    background: $background;
     border-radius: 5px;
     h2{
         font-weight: lighter;
@@ -89,7 +106,6 @@ main{
         font-size: 18px;
     } 
 }
-
 .tuto-box{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
@@ -142,8 +158,11 @@ main{
     padding: 10px;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
     &:hover{
         color: wheat;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
     }
 }
 
