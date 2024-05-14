@@ -45,22 +45,20 @@ header{
         .right-topBar{
             display: flex;
             flex-direction: column;
-            align-items: center;
+            justify-content: center;
             background-color: $beigeFilter;
-            padding: 5px;
             translate: 0 -300%;
             position: absolute;
             width: 100vw;
             height: 100vh;
-            top: 320%; 
+            top: 44vh; 
             left: 50%;
             transform: translate(-50%, -50%);
             @include transition;
             &.active{
                 translate: 0;
-                padding-top: 50%;
             }
-            .account, .login, .home, .help{
+            .account, .login, .home, .support{
                 cursor: pointer;
                 font-weight: bold;
                 margin: 10px;
@@ -92,10 +90,19 @@ header{
         @media screen and (min-width:1024px) {
             .right-topBar{
                 flex-direction: row;
-                padding: 5px 10px;
+                align-items: center;
+                justify-content: space-between;
+                position: absolute;
+                top: 50%;
+                left: 60%;
+                transform: translate(-50%, -50%);
                 height: auto;
-                width: auto;
+                width: 500px;
                 background: none;
+                margin-left: 80px;
+                &:active{
+                    padding-top: 250px;
+                }
                 .tags, .account, .login{
                     margin: 30px;
                     cursor: pointer;

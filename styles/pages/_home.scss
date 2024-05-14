@@ -5,6 +5,7 @@
 }
 main{
     background-color: $background;
+    height: 100%;
 }
 .top-content{
     width: 100%;
@@ -37,37 +38,51 @@ main{
 .wrapper{
     margin: 0 auto;
     padding: 15px;
-    width: 350px;
+    max-width: 80%;
 }
-.tutoriel, .categories{
+.tutoriel, .swiper, .difficulty{
     background: $darkerRosy;
     padding: 0 20px 20px 20px;
     border-radius: 10px;
-}
-.tuto-title{
-    position: relative;
     h2{
         padding: 15px 0;
     }
+}
+.categoriesBox{
+    .categoriesName{
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: lighter;
+    }  
+}
+.difficulty-box{
+    display: flex;
+    justify-content: space-evenly;
+}
+.tuto-title{
+    position: relative;
     .howMushy{
-        width: 30%;
+        width: 130px;
         position: absolute;
-        top: 10%;
-        left: 75%;
-        transform: translate(-30%, -30%);
+        top: 20px;
+        right: -40px;
+        transform: translate(-10%, -50%);
     }
 }
-.tuto-box{
+.step, .level{
+    background: $beigeFilter;
+    border-radius: 5px;
     h2{
         font-weight: lighter;
         font-style: italic;
         padding: 15px;
         font-size: 18px;
-    }
-    .step{
-        background: $beigeFilter;
-        border-radius: 5px;
-    }
+    } 
+}
+.tuto-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 1rem;
 }
 .backTop{
     position: relative;
@@ -89,9 +104,9 @@ main{
     background-color: $beigeFilter;
     width: 90%;
     border-radius: 15px;
-    display: none;
+    // display: none;
     position: fixed;
-    bottom: 1%;
+    bottom: 5px;
     left: 10%;
     transform: translate(-5%, -10%);
     padding: 10px;
@@ -102,3 +117,26 @@ main{
         margin: 5px auto;
     }
 }
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: $background;
+    border-radius: 15px;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        color: wheat;
+    }
+}
+//   .swiper-slide img {
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//   }

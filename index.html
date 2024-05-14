@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles/style.min.css">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <title>QuizGrove</title>
@@ -22,7 +23,7 @@
                 <div class="home">Accueil</div>
                 <div class="login">Créer un compte</div>
                 <div class="account">Mon compte</div>
-                <div class="help">Aide</div>
+                <div class="support">Support</div>
             </div>
             <div class="burger">
                 <div></div>
@@ -39,14 +40,23 @@
             </div>
         </div>
         <div class="wrapper">
-            <div class="categories">
+            <div class="swiper">
                 <h2>Catégories</h2>
-                <div>Géographie</div>
-                <div>Histoire</div>
-                <div>Art</div>
-                <div>Films</div>
-                <div>Séries</div>
-                <div>Anime</div>
+                <div class="categories swiper-wrapper"></div>
+            </div>
+            <div class="difficulty">
+                <h2>Niveaux de difficulté</h2>
+                <div class="difficulty-box">
+                    <div class="level">
+                        <h2>Débutant</h2>
+                    </div>
+                    <div class="level">
+                        <h2>Confirmé</h2>
+                    </div>
+                    <div class="level">
+                        <h2>Expert</h2>
+                    </div>
+                </div>
             </div>
             <div class="tutoriel">
                 <div class="tuto-title">
@@ -92,6 +102,7 @@
             Contactez-nous | CGU | Qui sommes-nous ? | Politique de confidentialité | Mentions légales
         </nav>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>

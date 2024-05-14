@@ -4,25 +4,56 @@
 
 // 🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐
 
-// function display(){
-//     fetch(`https://api.openquizzdb.org/?key=CMZ7U55A9Q&choice=4&anec=1&wiki=1`)
-//     .then(response => response.json())
-//     .then(data => {
-//       console.log(data);
-//     })
-//     .catch(error => {console.log("Erreur lors de la récup des données :", error);
-//   })
-// }
+const swiper = new Swiper(".swiper", {
+  slidesPerView: 3,
+  spaceBetween: 7,
+  grabCursor: true,
+});
 
-// display()
-
-
+let categoriesWrapper = document.querySelector(".categories")
 
 // 🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀 
 
 // ⭐ // // // // // // // // Fonctions // // // // // // // // // // // // ⭐
 
 // 🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀 
+
+// Liste des catégories
+const categories = [
+  "Animaux", "Arts", "Cinema", "Culture", "Gastronomie", "Géographie", "Histoire", "Informatique", "Internet", "Litterature", "Loisirs", "Musique", "Sciences", "Sports"
+];
+
+// // Liste des niveaux de difficulté
+// const difficulties = ["debutant", "confirme", "expert"];
+
+// Fonction pour récupérer les questions par catégorie et niveau de difficulté
+function displayCategories() {
+  // Parcourir les catégories et les niveaux de difficulté et récupérer les questions
+  categories.forEach(category => {
+    // difficulties.forEach(difficulty => {
+      fetch(`https://api.openquizzdb.org/?key=CMZ7U55A9Q&lang=fr&choice=4&categ=${category}`)
+        .then(response => response.json())
+        .then(data => {
+          // Traitez les données récupérées ici
+          console.log(data.results);
+          
+          // Vérifie si la catégorie a déjà été affichée
+          if (!document.getElementById(category)) {
+            categoriesWrapper.innerHTML += 
+              `
+              <div class="categoriesBox swiper-slide" id="${category}">
+                  <h3 class="categoriesName">${category}</h3>
+              </div>
+              `;
+          }
+        })
+        .catch(error => console.error(`Erreur lors de la récupération des questions de la catégorie "${category}" et de difficulté "${difficulty}":`, error));
+    // });
+  });
+}
+
+// Appelez la fonction pour afficher les catégories
+displayCategories();
 
 
 
@@ -38,7 +69,7 @@
 
 let burger = document.querySelector('.burger'),
     rightTopBar = document.querySelector('.right-topBar');
-console.log(burger, navigation);
+// console.log(burger, navigation);
 
 burger.addEventListener('click', () => {
     burger.classList.toggle("active");
