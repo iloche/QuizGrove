@@ -13,7 +13,7 @@ main{
     h1{
         font-weight: lighter;
     }
-    .box{
+    .box, .question-box{
         @include absmiddle;
         width: 50%;
         text-align: center;
@@ -43,7 +43,7 @@ main{
     padding: 15px;
     max-width: 80%;
 }
-.tutoriel, .swiper, .difficulty, .anecdote{
+.tutoriel, .categories, .difficulty, .anecdote{
     margin: 50px 0;
     background: $darkerRosy;
     padding: 0 20px 20px 20px;
@@ -55,7 +55,7 @@ main{
 ul{
     padding: 0;
 }
-.categories{
+.categories-content{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     gap: 1rem;
@@ -72,7 +72,7 @@ ul{
         width: 120px;
         position: absolute;
         top: 70px;
-        left: 10%;
+        left: 5%;
         transform: translate(-50%, -50%);
     }
 }
@@ -118,8 +118,24 @@ ul{
         width: 130px;
         position: absolute;
         top: 20px;
-        right: -45px;
+        right: -50px;
         transform: translate(-10%, -50%);
+    }
+}
+.categories-title{
+    position: relative;
+    display: flex;
+    justify-content: end;
+    h2{
+        text-align: center;
+        width: 75%;
+    }
+    .sittingMushy{
+        width: 140px;
+        position: absolute;
+        top: 60px;
+        left: 5%;
+        transform: translate(-50%, -50%);
     }
 }
 .tuto-title{
@@ -181,12 +197,15 @@ ul{
         margin: 5px auto;
     }
 }
-.swiper-container {
+.swiper-wrapper {
     width: 100%;
     height: 100%;
 }
+.testimonials{
+    overflow: hidden;
+}
 .newsletter{
-    background: url(https://wallpapercave.com/wp/wp1812222.jpg) bottom / cover;
+    background: url(https://i.pinimg.com/originals/14/7e/4d/147e4d0b1eedec2a9561b9415983770c.png) bottom / cover;
     // width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
@@ -216,4 +235,49 @@ ul{
 #content {
     display: none;
     padding: 20px;
+}
+.form-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    translate: -50% -50% 0;
+    width: 50%;
+    text-align: center;
+    border: 2px solid #bc8f8f;
+    border-radius: 15px;
+    background-color: tan;
+    label {
+        text-align: start;
+        display: block;
+        margin-bottom: 5px;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+    input[type="email"],
+    input[type="password"] {
+        width: calc(100% - 20px);
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    button {
+        width: 20%;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: rosybrown;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        &:hover {
+            background-color: darken(rosybrown, 10%);
+        }
+    }
+    .checkbox-container {
+        margin-bottom: 15px;
+        margin-left: 10px;
+        display: flex;
+    }
 }

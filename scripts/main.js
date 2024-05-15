@@ -4,11 +4,6 @@
 
 // 🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐
 
-// const swiper = new Swiper(".swiper", {
-//   slidesPerView: 3,
-//   spaceBetween: 7,
-//   grabCursor: true,
-// });
 
 let categoriesWrapper = document.querySelector(".categories")
 
@@ -63,7 +58,7 @@ function displayCategories() {
 
 let burger = document.querySelector('.burger'),
     rightTopBar = document.querySelector('.right-topBar');
-console.log(burger, navigation);
+// console.log(burger, navigation);
 
 burger.addEventListener('click', () => {
     burger.classList.toggle("active");
@@ -122,8 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-
-
+////////////////////////////////////////////////////////////////////////////////
 
   document.addEventListener("DOMContentLoaded", function() {
     // Simule un délai de chargement (par exemple 3 secondes)
@@ -132,4 +126,27 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('content').style.display = 'block';
         document.body.style.overflow = 'auto'; // Réactive le défilement une fois le chargement terminé
     }, 3000); // 3000 ms = 3 secondes
+});
+
+////////////////////////////////////////////////////////////////
+
+document.addEventListener("DOMContentLoaded", function() {
+  const swiper = new Swiper('.testimonials.slider', {
+      navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+          delay: 3000,
+      },
+      effect: "coverflow"
+  });
+});
+
+///////////////////////////////////////////////////////////////////
+
+document.getElementById('signup-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+  // Optionnel: vous pouvez ajouter ici une validation supplémentaire si nécessaire
+  window.location.href = '/jeu.html'; // Redirection vers jeu.html
 });

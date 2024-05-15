@@ -22,7 +22,7 @@
             <div class="right-topBar">
                 <div class="game"><a href="jeu.html">Le jeu</a></div>
                 <div class="login"><a href="login.html">Créer un compte</a></div>
-                <div class="account"><a href="#">Mon compte</a></div>
+                <div class="account"><a href="profil.html">Mon compte</a></div>
                 <div class="support"><a href="aide.html">Aide</a></div>
             </div>
             <div class="burger">
@@ -39,22 +39,30 @@
             <p>Chargement en cours...</p>
         </div>
         <div class="top-content">
-            <div class="box">
+            <div class="form-container">
                 <h1>S'inscrire</h1>
-                <div class="form">
-                    <div class="email-form">
-                        <h2>Adresse e-mail</h2>
-                        <input type="email" placeholder="mushy@quizgrove.com">
+                <form action="/jeu.html" method="post" id="signup-form">
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="mushy@quizgrove.com" required>
+                    
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+                    
+                    <label for="confirm-password">Confirmer le mot de passe</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmer le mot de passe" required>
+                    
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">J'accepte les <a href="#">Conditions d'utilisation</a> et <a href="#">Avis de confidentialité</a>.</label>
                     </div>
-                    <div class="password-form">
-                        <h2>Mot de passe</h2>
-                        <input type="password" placeholder="Nouveau mot de passe">
+                    
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Coche cette case pour recevoir des e-mails d’informations sur QuizGrove !</label>
                     </div>
-                    <div class="confirmpassword-form">
-                        <h2>Confirmer le mot de passe</h2>
-                        <input type="password" placeholder="Confirmer le mot de passe">
-                    </div>
-                </div>
+
+                    <button type="submit">S'inscrire</button>
+                </form>
             </div>
         </div>
     </main>

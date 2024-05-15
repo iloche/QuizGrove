@@ -42,27 +42,26 @@ header{
                 margin: 0;
             }
         }
-        .right-topBar{
+        .right-topBar {
             display: flex;
             flex-direction: column;
             justify-content: center;
             background-color: $beigeFilter;
-            translate: 0 -300%;
             position: absolute;
             width: 100vw;
             height: 100vh;
-            top: 44vh; 
-            left: 50%;
-            transform: translate(-50%, -50%);
-            @include transition;
-            &.active{
-                translate: 0;
+            top: -50%; 
+            left: -20%;
+            transform: translate(50%, -100%);
+            transition: all 0.3s ease;
+            &.active {
+                transform: translate(0);
             }
-            .account, .login, .game, .support{
+            .account, .login, .game, .support, .levels {
                 cursor: pointer;
                 font-weight: bold;
                 margin: 10px;
-                &:hover{
+                &:hover {
                     color: wheat;
                 }
             }
@@ -87,33 +86,43 @@ header{
                 rotate: 90deg;
             }
         }
-        @media screen and (min-width:1024px) {
-            .right-topBar{
+        @media screen and (min-width: 1024px) {
+            .right-topBar {
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
                 position: absolute;
-                top: 50%;
-                left: 60%;
+                top: 30%;
+                left: 50%;
                 transform: translate(-50%, -50%);
                 height: auto;
                 width: 500px;
                 background: none;
-                margin-left: 80px;
-                &:active{
-                    padding-top: 250px;
-                }
-                .tags, .account, .login{
-                    margin: 30px;
+                transform: translate(0);
+                .tags, .account, .login, .game, .support, .levels {
                     cursor: pointer;
-                    &:hover{
+                    &:hover {
                         color: wheat;
                     }
                 }
             }
-            .burger{
+            .burger {
                 display: none;
             }
         }
     }
+}
+.room{
+    background: url(https://cdna.artstation.com/p/assets/images/images/033/484/282/medium/siti-maisyarah-background.jpg?1609753948) top / cover;
+    // width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.profil{
+    background: url(https://i.pinimg.com/originals/9f/2e/20/9f2e20b7595ac5a873ddd17a22b9b934.jpg) top / cover;
+    // width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
