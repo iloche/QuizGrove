@@ -52,16 +52,52 @@ main{
         padding: 15px 0;
     }
 }
-.categoriesBox{
-    .categoriesName{
-        font-size: 18px;
-        font-weight: lighter;
-    }  
+ul{
+    padding: 0;
+}
+.categories{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 1rem;
+}
+.categories-title{
+    position: relative;
+    display: flex;
+    justify-content: end;
+    h2{
+        text-align: center;
+        width: 75%;
+    }
+    .sittingMushy{
+        width: 120px;
+        position: absolute;
+        top: 70px;
+        left: 10%;
+        transform: translate(-50%, -50%);
+    }
+}
+.tag {
+    text-align: center;
+    width: 100%;
+    margin: 10px;
+    font-size: 18px;
+    background: $background;
+    border-radius: 15px;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
+    &:hover{
+        color: wheat;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
+    }
 }
 .difficulty-box{
     display: flex;
     width: 90%;
-    .level{
+    .level, .tag{
         margin: 5px;
         width: 100%;
         text-align: center;
@@ -82,7 +118,7 @@ main{
         width: 130px;
         position: absolute;
         top: 20px;
-        right: -40px;
+        right: -45px;
         transform: translate(-10%, -50%);
     }
 }
@@ -96,7 +132,7 @@ main{
         transform: translate(-10%, -50%);
     }
 }
-.step, .level{
+.step, .level, .tag{
     background: $background;
     border-radius: 5px;
     h2{
@@ -149,27 +185,35 @@ main{
     width: 100%;
     height: 100%;
 }
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: $background;
-    border-radius: 15px;
-    display: flex;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    transition: box-shadow 0.3s ease;
-    &:hover{
-        color: wheat;
-        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
-    }
-}
-
 .newsletter{
-    background: url(https://w.wallhaven.cc/full/72/wallhaven-72yrwy.jpg) top / cover;
-    width: 100vw;
+    background: url(https://wallpapercave.com/wp/wp1812222.jpg) bottom / cover;
+    // width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
     overflow: hidden;
+}
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rosybrown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+.spinner {
+    width: 120px;
+    height: 120px;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+#content {
+    display: none;
+    padding: 20px;
 }

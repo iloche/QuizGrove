@@ -4,11 +4,11 @@
 
 // 🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐
 
-const swiper = new Swiper(".swiper", {
-  slidesPerView: 3,
-  spaceBetween: 7,
-  grabCursor: true,
-});
+// const swiper = new Swiper(".swiper", {
+//   slidesPerView: 3,
+//   spaceBetween: 7,
+//   grabCursor: true,
+// });
 
 let categoriesWrapper = document.querySelector(".categories")
 
@@ -23,37 +23,37 @@ const categories = [
   "Animaux", "Arts", "Cinema", "Culture", "Gastronomie", "Géographie", "Histoire", "Informatique", "Internet", "Litterature", "Loisirs", "Musique", "Sciences", "Sports"
 ];
 
-// // Liste des niveaux de difficulté
-// const difficulties = ["debutant", "confirme", "expert"];
+// Liste des niveaux de difficulté
+const difficulties = ["debutant", "confirme", "expert"];
 
 // Fonction pour récupérer les questions par catégorie et niveau de difficulté
 function displayCategories() {
   // Parcourir les catégories et les niveaux de difficulté et récupérer les questions
   categories.forEach(category => {
-    // difficulties.forEach(difficulty => {
+    difficulties.forEach(difficulty => {
       fetch(`https://api.openquizzdb.org/?key=CMZ7U55A9Q&lang=fr&choice=4&categ=${category}`)
         .then(response => response.json())
         .then(data => {
           // Traitez les données récupérées ici
-          console.log(data.results);
+          console.log(data);
           
           // Vérifie si la catégorie a déjà été affichée
           if (!document.getElementById(category)) {
             categoriesWrapper.innerHTML += 
               `
-              <div class="categoriesBox swiper-slide" id="${category}">
+              <div class="categoriesBox" id="${category}">
                   <h3 class="categoriesName">${category}</h3>
               </div>
               `;
           }
         })
-        .catch(error => console.error(`Erreur lors de la récupération des questions de la catégorie "${category}" et de difficulté "${difficulty}":`, error));
-    // });
+        .catch(error => console.error(`Erreur lors de la récupération des questions`, error));
+    });
   });
 }
 
-// Appelez la fonction pour afficher les catégories
-displayCategories();
+// // Appelez la fonction pour afficher les catégories
+// displayCategories();
 
 // 🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️  
 
@@ -63,7 +63,7 @@ displayCategories();
 
 let burger = document.querySelector('.burger'),
     rightTopBar = document.querySelector('.right-topBar');
-// console.log(burger, navigation);
+console.log(burger, navigation);
 
 burger.addEventListener('click', () => {
     burger.classList.toggle("active");
@@ -121,3 +121,15 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+
+
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Simule un délai de chargement (par exemple 3 secondes)
+    setTimeout(function() {
+        document.getElementById('loading-screen').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+        document.body.style.overflow = 'auto'; // Réactive le défilement une fois le chargement terminé
+    }, 3000); // 3000 ms = 3 secondes
+});
