@@ -57,11 +57,10 @@ function easyscroll(){
       if((window.scrollY + window.innerHeight) > (element.offsetTop +(element.offsetHeight/2))){
         setTimeout(() => {
           element.classList.add("visible")
-        }, index * 400)
+        }, index * 300)
        }     
    })
 }
-
 easyscroll()
 
 // 🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️  
@@ -69,6 +68,14 @@ easyscroll()
 // ⭐ // // // // // // // Évenements // // // // // // // // // // // //⭐
 
 // 🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️ 
+
+////////////////////////////////////////////////////////////////////
+
+window.addEventListener('scroll', function(){
+  easyscroll()
+})
+
+//////////////////////////////////////////////////////////////////
 
 let burger = document.querySelector('.burger'),
     rightTopBar = document.querySelector('.right-topBar');
@@ -146,14 +153,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener("DOMContentLoaded", function() {
   const swiper = new Swiper('.testimonials.slider', {
-      navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-      },
       autoplay: {
           delay: 3000,
       },
-      effect: "coverflow"
   });
 });
 
@@ -165,8 +167,3 @@ document.getElementById('signup-form').addEventListener('submit', function(event
   window.location.href = '/jeu.html'; // Redirection vers jeu.html
 });
 
-////////////////////////////////////////////////////////////////////
-
-window.addEventListener('scroll', function(){
-  easyscroll()
-})

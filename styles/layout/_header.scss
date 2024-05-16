@@ -1,13 +1,15 @@
 header{
     background: url(https://i.pinimg.com/originals/52/a2/cc/52a2cca14d2b8e510876507aaa0c5b13.jpg) top / cover;
-    // width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     overflow: hidden;
     h1{
         cursor: pointer;
-        font-size: 40px;
+        font-size: 18px;
         margin: 5px;
+        @media screen and (min-width: 1024px) {
+            font-size: 40px;
+        }
     }
     small{
         font-style: italic;
@@ -35,7 +37,7 @@ header{
                 width: 40%;
                 position: absolute;
                 top: 5%;
-                left: -40%;
+                left: -45%;
                 transform: translate(-5%, -10%);
             }
             .title{
@@ -50,14 +52,14 @@ header{
             position: absolute;
             width: 100vw;
             height: 100vh;
-            top: -60%; 
+            top: -70%; 
             left: -20%;
             transform: translate(50%, -100%);
             transition: all 0.3s ease;
             &.active {
                 transform: translate(0);
             }
-            .account, .login, .game, .support, .levels {
+            .account, .login, .game, .support, .logout {
                 cursor: pointer;
                 font-weight: bold;
                 margin-bottom: 15px;
@@ -99,7 +101,7 @@ header{
                 width: 40%;
                 background: none;
                 transform: translate(0);
-                .tags, .account, .login, .game, .support, .levels {
+                .tags, .account, .login, .game, .support, .logout {
                     cursor: pointer;
                     &:hover {
                         color: wheat;
@@ -110,19 +112,22 @@ header{
                 display: none;
             }
         }
-       
     }
 }
 .room{
     background: url(https://cdna.artstation.com/p/assets/images/images/033/484/282/medium/siti-maisyarah-background.jpg?1609753948) top / cover;
-    // width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     overflow: hidden;
 }
 .profil{
-    background: url(https://i.pinimg.com/originals/9f/2e/20/9f2e20b7595ac5a873ddd17a22b9b934.jpg) top / cover;
-    // width: 100vw;
+    background: url(https://cdn.80.lv/api/upload/content/aa/images/62a8747598895/widen_1840x0.jpg) top / cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.jeu{
+    background: url(https://i.pinimg.com/originals/38/67/cb/3867cb48a41331229bbeacd8f7714e8a.jpg) center / cover;
     height: 100vh;
     background-repeat: no-repeat;
     overflow: hidden;
