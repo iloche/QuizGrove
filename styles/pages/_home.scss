@@ -94,23 +94,47 @@ ul{
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
     }
 }
-.difficulty-box{
-    display: flex;
+.difficulty-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 1rem;
     width: 90%;
-    .level, .tag{
-        margin: 5px;
-        width: 100%;
-        text-align: center;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-        transition: box-shadow 0.3s ease;
-        &:hover{
-            color: wheat;
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
-        }
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+.level {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
+    h2{
+        font-size: 16px;
+        margin: 10px 0 0 0;
     }
 }
+.level img {
+    width: 100%; 
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 10px;
+}
+.level:hover {
+    h2{
+        color: wheat;
+    }
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
+}
+
 .difficulty-title{
     position: relative;
+    padding-top: 1px;
     h2{
         width: 80%;
     }
@@ -174,7 +198,6 @@ ul{
     background-color: $beigeFilter;
     width: 90%;
     border-radius: 15px;
-    // display: none;
     position: fixed;
     bottom: 5px;
     left: 10%;
@@ -192,16 +215,77 @@ ul{
     width: 100%;
     height: 100%;
 }
-.testimonials{
+.testimonials {
+    padding: 50px 0;
+    position: relative;
     overflow: hidden;
 }
-.newsletter{
-    background: url(https://i.pinimg.com/originals/14/7e/4d/147e4d0b1eedec2a9561b9415983770c.png) bottom / cover;
-    // width: 100%;
-    height: 100vh;
+.swiper-slide {
+    background: $background;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.comments {
+    font-size: 18px;
+    font-style: italic;
+}
+.user-comments {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.newsletter {
+    background: url(https://i.pinimg.com/originals/14/7e/4d/147e4d0b1eedec2a9561b9415983770c.png) top / cover;
+    height: 70vh;
     background-repeat: no-repeat;
     overflow: hidden;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    }
+    .news-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.8); 
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      .email-box {
+        padding: 10px;
+        width: 250px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px 0 0 5px;
+      }
+      .submit-box {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        background-color: rosybrown;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s ease;
+        &:hover {
+          background-color: darken(rosybrown, 10%);
+        }
+      }
+    }
+  }  
+
 #loading-screen {
     position: fixed;
     top: 0;
@@ -253,7 +337,6 @@ ul{
         border-radius: 4px;
     }
     button {
-        width: 20%;
         padding: 10px;
         margin-bottom: 10px;
         background-color: rosybrown;
@@ -278,5 +361,4 @@ ul{
 }
 .hidden.visible{
     opacity: 1;
-
 }

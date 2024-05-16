@@ -134,12 +134,12 @@ document.addEventListener('DOMContentLoaded', function() {
 ////////////////////////////////////////////////////////////////////////////////
 
   document.addEventListener("DOMContentLoaded", function() {
-    // Simule un délai de chargement (par exemple 3 secondes)
+    // Simule un délai de chargement
     setTimeout(function() {
         document.getElementById('loading-screen').style.display = 'none';
         document.getElementById('content').style.display = 'block';
         document.body.style.overflow = 'auto'; // Réactive le défilement une fois le chargement terminé
-    }, 3000); // 3000 ms = 3 secondes
+    }, 3000); 
 });
 
 ////////////////////////////////////////////////////////////////
