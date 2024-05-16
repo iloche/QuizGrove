@@ -5,7 +5,8 @@
 // 🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐
 
 
-let categoriesWrapper = document.querySelector(".categories")
+let categoriesWrapper = document.querySelector(".categories"),
+    elements = document.querySelectorAll(".hidden")
 
 // 🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀 
 
@@ -49,6 +50,19 @@ function displayCategories() {
 
 // // Appelez la fonction pour afficher les catégories
 // displayCategories();
+
+// easyscroll
+function easyscroll(){
+  elements.forEach((element, index) => {
+      if((window.scrollY + window.innerHeight) > (element.offsetTop +(element.offsetHeight/2))){
+        setTimeout(() => {
+          element.classList.add("visible")
+        }, index * 400)
+       }     
+   })
+}
+
+easyscroll()
 
 // 🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️⭐🏵️  
 
@@ -150,3 +164,9 @@ document.getElementById('signup-form').addEventListener('submit', function(event
   // Optionnel: vous pouvez ajouter ici une validation supplémentaire si nécessaire
   window.location.href = '/jeu.html'; // Redirection vers jeu.html
 });
+
+////////////////////////////////////////////////////////////////////
+
+window.addEventListener('scroll', function(){
+  easyscroll()
+})
