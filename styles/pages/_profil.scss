@@ -1,0 +1,106 @@
+.profile-container {
+    width: 60%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid rosybrown;
+    background-color: tan;
+}
+
+.profile-header h1 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.profile-header p {
+    color: #666;
+}
+
+.profile-details, .profile-stats, .profile-friends, .profile-settings {
+    margin-bottom: 20px;
+}
+
+.profile-details h2, .profile-stats h2, .profile-friends h2, .profile-settings h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.profile-details p, .profile-stats p {
+    margin: 5px 0;
+}
+
+.profile-settings button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.profile-settings button:hover {
+    background-color: #0056b3;
+}
+#message {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.success {
+    background-color: #4CAF50; /* Couleur verte pour les messages de succès */
+    color: white;
+}
+
+.error {
+    background-color: #f44336; /* Couleur rouge pour les messages d'erreur */
+    color: white;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

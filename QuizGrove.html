@@ -39,20 +39,20 @@
     </header>
     <main>
         <div class="top-content">
-            <div class="question-box">
-                <h1>Question</h1>
-                <ul>
-                    <li>choix</li>
-                    <li>choix</li>
-                    <li>choix</li>
-                    <li>choix</li>
-                </ul>
-                <p>Bonne réponse</p>
-                <p>Anecdote</p>
-            </div>
             <div class="level-box">
-
+                <h2>Level: <span id="level">1</span></h2>
             </div>
+            <div class="question-box">
+                <h1 id="question">Question</h1>
+                <ul id="answers">
+                    <!-- Options will be added here dynamically -->
+                </ul>
+                <p id="correct-answer" style="display:none;">Bonne réponse</p>
+                <p id="anecdote" style="display:none;">Anecdote</p>
+            </div>
+        </div>
+        <div id="progressBar">
+            <div id="progress"></div>
         </div>
         <div class="cookie">
             <p class="policy">En cliquant sur « Accepter tous les cookies », vous acceptez le stockage de cookies sur votre appareil pour améliorer la navigation sur le site, analyser son utilisation et contribuer à nos efforts de marketing.</p>
