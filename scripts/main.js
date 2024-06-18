@@ -4,52 +4,13 @@
 
 // 🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐🍄⭐
 
-
-let categoriesWrapper = document.querySelector(".categories"),
-    elements = document.querySelectorAll(".hidden")
+let elements = document.querySelectorAll(".hidden")
 
 // 🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀 
 
 // ⭐ // // // // // // // // Fonctions // // // // // // // // // // // // ⭐
 
 // 🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀⭐🎀 
-
-// Liste des catégories
-const categories = [
-  "Animaux", "Arts", "Cinema", "Culture", "Gastronomie", "Géographie", "Histoire", "Informatique", "Internet", "Litterature", "Loisirs", "Musique", "Sciences", "Sports"
-];
-
-// Liste des niveaux de difficulté
-const difficulties = ["debutant", "confirme", "expert"];
-
-// Fonction pour récupérer les questions par catégorie et niveau de difficulté
-function displayCategories() {
-  // Parcourir les catégories et les niveaux de difficulté et récupérer les questions
-  categories.forEach(category => {
-    difficulties.forEach(difficulty => {
-      fetch(`https://api.openquizzdb.org/?key=CMZ7U55A9Q&lang=fr&choice=4&categ=${category}`)
-        .then(response => response.json())
-        .then(data => {
-          // Traitez les données récupérées ici
-          console.log(data);
-          
-          // Vérifie si la catégorie a déjà été affichée
-          if (!document.getElementById(category)) {
-            categoriesWrapper.innerHTML += 
-              `
-              <div class="categoriesBox" id="${category}">
-                  <h3 class="categoriesName">${category}</h3>
-              </div>
-              `;
-          }
-        })
-        .catch(error => console.error(`Erreur lors de la récupération des questions`, error));
-    });
-  });
-}
-
-// // Appelez la fonction pour afficher les catégories
-// displayCategories();
 
 // easyscroll
 function easyscroll(){
@@ -81,7 +42,6 @@ burger.addEventListener('click', () => {
 )
 
 ////////////////////////////////////////////////////////////////////////////////
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const cookie = document.querySelector(".cookie");
@@ -131,18 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-////////////////////////////////////////////////////////////////////////////////
-
-  document.addEventListener("DOMContentLoaded", function() {
-    // Simule un délai de chargement
-    setTimeout(function() {
-        document.getElementById('loading-screen').style.display = 'none';
-        document.getElementById('content').style.display = 'block';
-        document.body.style.overflow = 'auto'; // Réactive le défilement une fois le chargement terminé
-    }, 3000); 
-});
-
-////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////
 
 document.addEventListener("DOMContentLoaded", function() {
   const swiper = new Swiper('.testimonials.slider', {
@@ -157,16 +106,18 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-///////////////////////////////////////////////////////////////////
-
-document.getElementById('signup-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Empêche l'envoi du formulaire par défaut
-  // Optionnel: vous pouvez ajouter ici une validation supplémentaire si nécessaire
-  window.location.href = '/jeu.html'; // Redirection vers jeu.html
-});
-
-////////////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////////////
 
 window.addEventListener('scroll', function(){
   easyscroll()
 })
+
+document.getElementById('scrollToCategories').addEventListener('click', function(event) {
+  event.preventDefault();
+  document.getElementById('categories').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('scrollToDifficulties').addEventListener('click', function(event) {
+  event.preventDefault();
+  document.getElementById('difficulties').scrollIntoView({ behavior: 'smooth' });
+});

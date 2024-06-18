@@ -12,6 +12,7 @@ main{
     margin: 0 auto;
     h1{
         font-weight: lighter;
+        font-size: 1.5rem;
     }
     .box, .question-box{
         @include absmiddle;
@@ -43,7 +44,7 @@ main{
     padding: 15px;
     max-width: 80%;
 }
-.categories, .difficulty, .anecdote{
+.categories, .difficulty{
     margin: 50px 0;
     background: $darkerRosy;
     padding: 0 20px 20px 20px;
@@ -57,7 +58,7 @@ ul{
 }
 .categories-content{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
 }
 .categories-title{
@@ -78,8 +79,8 @@ ul{
 }
 .tag {
     text-align: center;
-    width: 100%;
-    margin: 10px;
+    width: 90%;
+    margin: 0 auto;
     font-size: 18px;
     background: $background;
     border-radius: 15px;
@@ -96,11 +97,9 @@ ul{
 }
 .difficulty-box {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     gap: 1rem;
-    width: 90%;
     margin: 0 auto;
-    padding: 20px;
     border-radius: 10px;
 }
 .level {
@@ -124,10 +123,14 @@ ul{
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     margin-bottom: 10px;
+    @include transition;
 }
 .level:hover {
     h2{
         color: wheat;
+    }
+    img{
+        transform: scale(1.03);
     }
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
 }
@@ -216,6 +219,8 @@ ul{
     height: 100%;
 }
 .testimonials {
+    background: $darkerRosy;
+    margin: 0;
     padding: 50px 0;
     position: relative;
     overflow: hidden;
@@ -361,4 +366,54 @@ ul{
 }
 .hidden.visible{
     opacity: 1;
+}
+.screenshot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+    }
+}
+.screenshot-mockup {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    @media screen and (min-width: 1024px) {
+        width: 50%;
+    }
+}
+.screenshot-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: 1024px) {
+        width: 50%;
+
+    }
+    h1{
+        font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    }
+    p{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    }
+}
+.screenshot-title p i {
+    font-size: 36px;
+    margin-bottom: 10px;
 }
