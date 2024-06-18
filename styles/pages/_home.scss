@@ -306,13 +306,12 @@ ul{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 20px;
     border-radius: 10px;
-    max-width: 600px;
     margin: 0 auto;
     @media screen and (min-width: 1024px) {
         display: flex;
         flex-direction: row;
+        gap: 1.5rem;
     }
 }
 .screenshot-mockup {
@@ -321,7 +320,7 @@ ul{
     border-radius: 10px;
     margin-bottom: 20px;
     @media screen and (min-width: 1024px) {
-        width: 50%;
+        width: 55%;
     }
 }
 .screenshot-title {
@@ -330,15 +329,19 @@ ul{
     align-items: center;
     @media screen and (min-width: 1024px) {
         width: 50%;
-
     }
     h1{
-        font-size: 24px;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
     }
     p{
-        display: flex;
+    background-color: $background;
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
