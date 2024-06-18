@@ -85,12 +85,8 @@ ul{
 }
 .tag {
     text-align: center;
-<<<<<<< HEAD
     width: 90%;
     margin: 0 auto;
-=======
-    width: 75%;
->>>>>>> e4f9ee39fbc6c6eefd30dabaeec0ec012e3ceeb7
     font-size: 18px;
     background: $background;
     border-radius: 15px;
@@ -109,11 +105,7 @@ ul{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     gap: 1rem;
-<<<<<<< HEAD
     margin: 0 auto;
-=======
-    width: 100%;
->>>>>>> e4f9ee39fbc6c6eefd30dabaeec0ec012e3ceeb7
     border-radius: 10px;
     @media screen and (min-width: 1024px) {
         justify-items: center;
@@ -140,10 +132,6 @@ ul{
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     margin-bottom: 10px;
-<<<<<<< HEAD
-=======
-    // aspect-ratio: 1 / 1;
->>>>>>> e4f9ee39fbc6c6eefd30dabaeec0ec012e3ceeb7
     @include transition;
 }
 .level:hover {
@@ -151,11 +139,7 @@ ul{
         color: wheat;
     }
     img{
-<<<<<<< HEAD
         transform: scale(1.03);
-=======
-        transform: scale(1.05);
->>>>>>> e4f9ee39fbc6c6eefd30dabaeec0ec012e3ceeb7
     }
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
 }
