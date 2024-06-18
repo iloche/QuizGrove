@@ -26,8 +26,8 @@
                 <small class="slogan">Fais éclore ton savoir</small>
             </div>
             <div class="right-topBar">
-                <div class="levels"><a href="#">Niveau</a></div>
                 <div class="account"><a href="profil.html">Mon compte</a></div>
+                <div class="logout"><a href="#">Déconnexion</a></div>
                 <div class="support"><a href="aide.html">Aide</a></div>
             </div>
             <div class="burger">
@@ -39,23 +39,26 @@
     </header>
     <main>
         <div class="top-content">
-            <div class="question-box">
-                <h1>Question</h1>
-                <ul>
-                    <li>choix</li>
-                    <li>choix</li>
-                    <li>choix</li>
-                    <li>choix</li>
-                </ul>
-                <p>Bonne réponse</p>
-                <p>Anecdote</p>
-            </div>
             <div class="level-box">
-
+                <h2>Level: <span id="level">1</span></h2>
             </div>
+<<<<<<< HEAD
             <div class="progress-container">
                 <div class="progress-bar">70%</div>
             </div>
+=======
+            <div class="question-box">
+                <h1 id="question">Question</h1>
+                <ul id="answers">
+                    <!-- Options will be added here dynamically -->
+                </ul>
+                <p id="correct-answer" style="display:none;">Bonne réponse</p>
+                <p id="anecdote" style="display:none;">Anecdote</p>
+            </div>
+        </div>
+        <div id="progressBar">
+            <div id="progress"></div>
+>>>>>>> e4f9ee39fbc6c6eefd30dabaeec0ec012e3ceeb7
         </div>
         <div class="cookie">
             <p class="policy">En cliquant sur « Accepter tous les cookies », vous acceptez le stockage de cookies sur votre appareil pour améliorer la navigation sur le site, analyser son utilisation et contribuer à nos efforts de marketing.</p>

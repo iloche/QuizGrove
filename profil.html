@@ -38,6 +38,40 @@
             <div class="box">
                 <h1>Profil</h1>
             </div>
+            <div class="profile-container">
+                <div class="profile-header">
+                    <img id="avatar" src="images/a88d5f5e5b2561c09669ca333cc6e76f-removebg-preview.png" alt="Avatar">
+                    <h1 id="username">Nom d'utilisateur</h1>
+                    <!-- Ajoutez l'icône de la clé anglaise pour changer le pseudo -->
+                    <i class="fa-solid fa-wrench" onclick="openModal('changePseudoModal')"></i>
+                </div>
+                <div id="changePseudoModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('changePseudoModal')">&times;</span>
+                        <h2>Changer de Pseudo</h2>
+                        <input type="text" id="newPseudoInput" placeholder="Entrez votre nouveau pseudo...">
+                        <button onclick="changePseudo()">Valider</button>
+                    </div>
+                </div>
+                
+                <div id="message"></div>
+                <div class="profile-details">
+                    <h2>Informations Personnelles</h2>
+                    <p>Email : <span id="email">exemple@example.com</span></p>
+                    <p>Date d'inscription : <span id="registration-date">2023-01-15</span></p>
+                </div>
+                <div class="profile-stats">
+                    <h2>Statistiques de Jeu</h2>
+                    <p>Niveau : <span id="level">42</span></p>
+                    <p>XP : <span id="xp">12345</span></p>
+                </div>
+                <div class="profile-settings">
+                    <h2>Paramètres de Compte</h2>
+                    <button onclick="openModal('changePseudoModal')">Modifier Nom d'utilisateur</button>
+                    <button onclick="resetAccount()">Réinitialiser le compte</button>
+                </div>
+            </div>
+            
         </div>
     </main>
     <footer>
